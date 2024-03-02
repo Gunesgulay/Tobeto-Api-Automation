@@ -32,7 +32,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"courseCategoryId\": 1005,\n  \"name\": \"oop\",\n  \"totalDuration\": 5,\n  \"priority\": 1,\n  \"isActive\": true\n}"
+					"raw": "{\n  \"courseCategoryId\": 2005,\n  \"name\": \"oop\",\n  \"totalDuration\": 5,\n  \"priority\": 1,\n  \"isActive\": true\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Courses",

@@ -32,7 +32,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"courseId\": 1008,\n  \"name\": \"java\",\n  \"visibility\": true,\n  \"language\": \"turkish\",\n  \"content\": \"education\",\n  \"duration\": 10,\n  \"isActive\": true\n}"
+					"raw": "{\n  \"courseId\": 2008,\n  \"name\": \"java\",\n  \"visibility\": true,\n  \"language\": \"turkish\",\n  \"content\": \"education\",\n  \"duration\": 10,\n  \"isActive\": true\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Lessons",
@@ -70,7 +70,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/Lessons/4",
+					"raw": "http://localhost:5278/api/Lessons/2009",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -79,7 +79,7 @@
 					"path": [
 						"api",
 						"Lessons",
-						"4"
+						"2009"
 					]
 				}
 			},

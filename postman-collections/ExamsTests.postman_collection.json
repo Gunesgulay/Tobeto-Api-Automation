@@ -8,6 +8,19 @@
 	"item": [
 		{
 			"name": "CreateExam",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 201\", function (){",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -51,6 +64,19 @@
 		},
 		{
 			"name": "GetExam",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -70,7 +96,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/Exams/8",
+					"raw": "http://localhost:5278/api/Exams/2007",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -79,7 +105,7 @@
 					"path": [
 						"api",
 						"Exams",
-						"8"
+						"2007"
 					]
 				}
 			},
@@ -87,6 +113,19 @@
 		},
 		{
 			"name": "UpdateExam",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -111,7 +150,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 6,\n  \"name\": \"python\",\n  \"priority\": 1,\n  \"visibility\": true,\n  \"description\": \"firstlevel\",\n  \"numberOfQuestions\": 20,\n  \"startingTime\": \"2024-02-23T12:12:00.430Z\",\n  \"endingTime\": \"2024-02-23T12:13:00.430Z\",\n  \"isActive\": true,\n  \"duration\": 20\n}"
+					"raw": "{\n  \"id\": 2007,\n  \"name\": \"java\",\n  \"priority\": 1,\n  \"visibility\": true,\n  \"description\": \"secondlevel\",\n  \"numberOfQuestions\": 20,\n  \"startingTime\": \"2024-02-23T12:12:00.430Z\",\n  \"endingTime\": \"2024-02-23T12:13:00.430Z\",\n  \"isActive\": true,\n  \"duration\": 20\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Exams",
@@ -130,6 +169,19 @@
 		},
 		{
 			"name": "DeleteExam",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -158,7 +210,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5278/api/Exams/4",
+					"raw": "http://localhost:5278/api/Exams/2007",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -167,7 +219,7 @@
 					"path": [
 						"api",
 						"Exams",
-						"4"
+						"2007"
 					]
 				}
 			},
