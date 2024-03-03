@@ -1,13 +1,26 @@
 {
 	"info": {
 		"_postman_id": "f9bf293e-d024-406c-8f70-9ac95c14bfaa",
-		"name": "SurveyCategoriesTests",
+		"name": "SurveyTypeTests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "27921593"
 	},
 	"item": [
 		{
-			"name": "CreateSurveyCategory",
+			"name": "CreateSurveyType",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 201\", function (){",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -50,7 +63,20 @@
 			"response": []
 		},
 		{
-			"name": "UpdateSurveyCategory",
+			"name": "UpdateSurveyType",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -75,7 +101,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 1,\n  \"name\": \"Email yoluyla\",\n  \"priority\": 1,\n  \"visibility\": true\n}"
+					"raw": "{\n  \"id\": 4,\n  \"name\": \"Email yoluyla\",\n  \"priority\": 1,\n  \"visibility\": true\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/SurveyTypes",
@@ -93,14 +119,27 @@
 			"response": []
 		},
 		{
-			"name": "GetSurveyCategory",
+			"name": "GetSurveyType",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgxODA0MzUsImV4cCI6MTcwODE4MTAzNSwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.C1GtxRyZ3cCzQy2H8KceQ9VDJeeolxi5j1V91JGTD-kx8_L0NXr0p-Y-zuPFdRDTPEl3Bdbld2epM7LSPecQgQ",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDk0OTkzNjEsImV4cCI6MTcwOTQ5OTk2MSwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.keCwHR12JPkKD14gXkBTfF9WZNXbz0Z8v_jTTXUJBSZtax7UF7kT6cZDZRijR2-9pvQkUJO5BRbSh-9x9QDnaQ",
 							"type": "string"
 						}
 					]
@@ -138,7 +177,20 @@
 			"response": []
 		},
 		{
-			"name": "DeleteSurveyCategory",
+			"name": "DeleteSurveyType",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -158,7 +210,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/SurveyTypes/2",
+					"raw": "http://localhost:5278/api/SurveyTypes/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -167,7 +219,7 @@
 					"path": [
 						"api",
 						"SurveyTypes",
-						"2"
+						"4"
 					]
 				}
 			},

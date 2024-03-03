@@ -1,0 +1,146 @@
+{
+	"id": "ab9fde86-53ab-4004-a670-61f796458cf1",
+	"name": "GraduationStatusTests",
+	"timestamp": "2024-03-02T12:29:36.969Z",
+	"collection_id": "32002987-c6726ebd-ad1d-48a5-b689-a200d3d6b1ad",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-02T12:29:36.016Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "4efa8d43-34c8-411e-a133-a54f2264a445",
+			"name": "CreateGraduationStatus",
+			"url": "http://localhost:5278/api/GraduationStatus",
+			"time": 49,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code 201": true
+			},
+			"testPassFailCounts": {
+				"Status code 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Status code 201": true
+				}
+			]
+		},
+		{
+			"id": "bcc955f0-be11-4c8d-9d18-73a259093e1d",
+			"name": "GetGraduationStatus",
+			"url": "http://localhost:5278/api/GraduationStatus/6",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "d1e2b551-f040-4f2f-bc6c-d86180c3c555",
+			"name": "UpdateGraduationStatus",
+			"url": "http://localhost:5278/api/GraduationStatus",
+			"time": 108,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				108
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "d38d2f36-41f6-4945-93d7-76c2cdefd4d8",
+			"name": "DeleteGraduationStatus",
+			"url": "http://localhost:5278/api/GraduationStatus/6",
+			"time": 91,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				91
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 271,
+	"collection": {
+		"requests": [
+			{
+				"id": "4efa8d43-34c8-411e-a133-a54f2264a445",
+				"method": "POST"
+			},
+			{
+				"id": "bcc955f0-be11-4c8d-9d18-73a259093e1d",
+				"method": "GET"
+			},
+			{
+				"id": "d1e2b551-f040-4f2f-bc6c-d86180c3c555",
+				"method": "PUT"
+			},
+			{
+				"id": "d38d2f36-41f6-4945-93d7-76c2cdefd4d8",
+				"method": "DELETE"
+			}
+		]
+	}
+}

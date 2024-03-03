@@ -1,0 +1,177 @@
+{
+	"id": "652b8480-6bbe-494f-a264-31ef43aa6a35",
+	"name": "ClassroomExamsTests",
+	"timestamp": "2024-03-03T21:26:55.827Z",
+	"collection_id": "27921593-da18e695-b759-4f36-a3fb-1a10d9026199",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 5,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-03T21:26:54.876Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "4a239f8c-6136-4b26-97da-e927439981f4",
+			"name": "CreateClassroomExam",
+			"url": "http://localhost:5278/api/ClassroomExams",
+			"time": 125,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code 201": true
+			},
+			"testPassFailCounts": {
+				"Status code 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				125
+			],
+			"allTests": [
+				{
+					"Status code 201": true
+				}
+			]
+		},
+		{
+			"id": "534287fc-5103-427d-996d-ac7f106b584a",
+			"name": "GetClassroomExam-id",
+			"url": "http://localhost:5278/api/ClassroomExams/6",
+			"time": 155,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				155
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "a3818274-fcd3-4f6b-8bb1-8f2f7241b0b1",
+			"name": "UpdateClassroomExam",
+			"url": "http://localhost:5278/api/ClassroomExams",
+			"time": 149,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				149
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "99d4a99e-73c6-4e3d-9013-f3763433e295",
+			"name": "GetClassroomExam",
+			"url": "http://localhost:5278/api/ClassroomExams?PageIndex=0&PageSize=30",
+			"time": 102,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				102
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "9f98a069-ddea-445e-a951-6d2ad53dfec0",
+			"name": "DeleteClassroomExam",
+			"url": "http://localhost:5278/api/ClassroomExams/6",
+			"time": 102,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				102
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 633,
+	"collection": {
+		"requests": [
+			{
+				"id": "4a239f8c-6136-4b26-97da-e927439981f4",
+				"method": "POST"
+			},
+			{
+				"id": "534287fc-5103-427d-996d-ac7f106b584a",
+				"method": "GET"
+			},
+			{
+				"id": "a3818274-fcd3-4f6b-8bb1-8f2f7241b0b1",
+				"method": "PUT"
+			},
+			{
+				"id": "99d4a99e-73c6-4e3d-9013-f3763433e295",
+				"method": "GET"
+			},
+			{
+				"id": "9f98a069-ddea-445e-a951-6d2ad53dfec0",
+				"method": "DELETE"
+			}
+		]
+	}
+}

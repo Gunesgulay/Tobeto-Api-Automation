@@ -8,6 +8,19 @@
 	"item": [
 		{
 			"name": "CreateForeignLanguageLevel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 201\", function (){",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -51,6 +64,19 @@
 		},
 		{
 			"name": "GetForeignLanguageLevel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -60,7 +86,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/ForeignLanguageLevels/1",
+					"raw": "http://localhost:5278/api/ForeignLanguageLevels/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -69,7 +95,7 @@
 					"path": [
 						"api",
 						"ForeignLanguageLevels",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -77,6 +103,19 @@
 		},
 		{
 			"name": "UpdateForeignLanguageLevel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -101,7 +140,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 1,\n  \"name\": \"C1\",\n  \"priority\": 1,\n  \"visibility\": true\n}"
+					"raw": "{\n  \"id\": 3,\n  \"name\": \"C1\",\n  \"priority\": 1,\n  \"visibility\": true\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/ForeignLanguageLevels",
@@ -120,6 +159,19 @@
 		},
 		{
 			"name": "DeleteForeignLanguageLevel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -138,7 +190,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5278/api/ForeignLanguageLevels/2",
+					"raw": "http://localhost:5278/api/ForeignLanguageLevels/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -147,7 +199,7 @@
 					"path": [
 						"api",
 						"ForeignLanguageLevels",
-						"2"
+						"3"
 					]
 				}
 			},

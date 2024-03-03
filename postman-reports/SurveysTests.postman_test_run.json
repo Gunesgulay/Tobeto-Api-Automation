@@ -1,0 +1,146 @@
+{
+	"id": "c6781d8d-ca0a-462f-aa5f-e81671c52b23",
+	"name": "SurveysTests",
+	"timestamp": "2024-03-03T21:17:00.389Z",
+	"collection_id": "27921593-ccbcfecb-8899-4607-b10e-77e89951c363",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-03T21:16:59.245Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "97a43e47-bfee-445b-a5bf-e62b6ed55d47",
+			"name": "CreateSurvey",
+			"url": "http://localhost:5278/api/Surveys",
+			"time": 146,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code 201": true
+			},
+			"testPassFailCounts": {
+				"Status code 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				146
+			],
+			"allTests": [
+				{
+					"Status code 201": true
+				}
+			]
+		},
+		{
+			"id": "2022840f-46aa-412d-9f28-0683b929600d",
+			"name": "UpdateSurvey",
+			"url": "http://localhost:5278/api/Surveys",
+			"time": 177,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				177
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "d65a6d97-4eca-4c38-b127-3f9f4cb96934",
+			"name": "GetSurvey",
+			"url": "http://localhost:5278/api/Surveys?PageIndex=0&PageSize=5",
+			"time": 99,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				99
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "69aa2221-f980-43eb-920a-9681271c1d4d",
+			"name": "DeleteSurvey",
+			"url": "http://localhost:5278/api/Surveys/7",
+			"time": 195,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				195
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 617,
+	"collection": {
+		"requests": [
+			{
+				"id": "97a43e47-bfee-445b-a5bf-e62b6ed55d47",
+				"method": "POST"
+			},
+			{
+				"id": "2022840f-46aa-412d-9f28-0683b929600d",
+				"method": "PUT"
+			},
+			{
+				"id": "d65a6d97-4eca-4c38-b127-3f9f4cb96934",
+				"method": "GET"
+			},
+			{
+				"id": "69aa2221-f980-43eb-920a-9681271c1d4d",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -1,0 +1,146 @@
+{
+	"id": "10060c52-8c4f-4048-875a-b6731f1c15eb",
+	"name": "OrganizationTypesTests",
+	"timestamp": "2024-03-03T20:45:22.667Z",
+	"collection_id": "27921593-9234356a-a807-46fb-b20e-82459dde95e2",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-03T20:45:21.377Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "2f5d9593-62d3-418b-be1c-70cfb6e26079",
+			"name": "CreateOrganizationType",
+			"url": "http://localhost:5278/api/OrganizationTypes",
+			"time": 154,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code 201": true
+			},
+			"testPassFailCounts": {
+				"Status code 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				154
+			],
+			"allTests": [
+				{
+					"Status code 201": true
+				}
+			]
+		},
+		{
+			"id": "39b4bacc-8ab0-47fd-9238-35b119160067",
+			"name": "UpdateOrganizationType",
+			"url": "http://localhost:5278/api/OrganizationTypes",
+			"time": 196,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				196
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "080c10c0-8933-4a3f-a0bf-dacb29520feb",
+			"name": "GetOrganizationType",
+			"url": "http://localhost:5278/api/OrganizationTypes?PageIndex=0&PageSize=20",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "ead3a7ed-6a88-412f-aba7-cc7925276673",
+			"name": "DeleteOrganizationType",
+			"url": "http://localhost:5278/api/OrganizationTypes/1",
+			"time": 147,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				147
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 517,
+	"collection": {
+		"requests": [
+			{
+				"id": "2f5d9593-62d3-418b-be1c-70cfb6e26079",
+				"method": "POST"
+			},
+			{
+				"id": "39b4bacc-8ab0-47fd-9238-35b119160067",
+				"method": "PUT"
+			},
+			{
+				"id": "080c10c0-8933-4a3f-a0bf-dacb29520feb",
+				"method": "GET"
+			},
+			{
+				"id": "ead3a7ed-6a88-412f-aba7-cc7925276673",
+				"method": "DELETE"
+			}
+		]
+	}
+}

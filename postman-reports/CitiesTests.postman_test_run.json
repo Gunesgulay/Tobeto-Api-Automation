@@ -1,0 +1,177 @@
+{
+	"id": "00b808b0-2e2e-492e-b702-43cabaaa4e0d",
+	"name": "CitiesTests",
+	"timestamp": "2024-03-03T21:02:18.252Z",
+	"collection_id": "27921593-95e8508a-be9c-4da4-b86e-5a3f23e878d3",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 5,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-03T21:02:17.383Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "d10825c2-c79c-4958-8e38-1b5057668cd6",
+			"name": "GetCity_Id",
+			"url": "http://localhost:5278/api/Cities/7",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "b59784e1-4d52-4d9b-9baf-d5751a70ef8d",
+			"name": "GetCity",
+			"url": "http://localhost:5278/api/Cities?PageIndex=0&PageSize=30",
+			"time": 71,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				71
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "96762527-5a5b-450b-b7fa-027bbbc22f3f",
+			"name": "CreateCity",
+			"url": "http://localhost:5278/api/Cities",
+			"time": 111,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code 201": true
+			},
+			"testPassFailCounts": {
+				"Status code 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				111
+			],
+			"allTests": [
+				{
+					"Status code 201": true
+				}
+			]
+		},
+		{
+			"id": "20e157c4-7175-4a61-8d3d-455f5ca3965d",
+			"name": "UpdateCity",
+			"url": "http://localhost:5278/api/Cities",
+			"time": 102,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				102
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "d3898e17-fcd4-4068-8803-68b9d4908727",
+			"name": "DeleteCity",
+			"url": "http://localhost:5278/api/Cities/7",
+			"time": 90,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				90
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 419,
+	"collection": {
+		"requests": [
+			{
+				"id": "d10825c2-c79c-4958-8e38-1b5057668cd6",
+				"method": "GET"
+			},
+			{
+				"id": "b59784e1-4d52-4d9b-9baf-d5751a70ef8d",
+				"method": "GET"
+			},
+			{
+				"id": "96762527-5a5b-450b-b7fa-027bbbc22f3f",
+				"method": "POST"
+			},
+			{
+				"id": "20e157c4-7175-4a61-8d3d-455f5ca3965d",
+				"method": "PUT"
+			},
+			{
+				"id": "d3898e17-fcd4-4068-8803-68b9d4908727",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -1,0 +1,177 @@
+{
+	"id": "a5e16e40-269e-4729-ab37-5c3af3e231f9",
+	"name": "ClassroomTests",
+	"timestamp": "2024-03-03T21:21:32.082Z",
+	"collection_id": "27921593-fb9946f5-9ab6-4239-b7df-561f651ec2a6",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 5,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-03T21:21:30.479Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "55cf8d43-ef5c-4ece-89e8-e89b82e901ab",
+			"name": "CreateClassroom",
+			"url": "http://localhost:5278/api/Classrooms",
+			"time": 42,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code 201": true
+			},
+			"testPassFailCounts": {
+				"Status code 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				42
+			],
+			"allTests": [
+				{
+					"Status code 201": true
+				}
+			]
+		},
+		{
+			"id": "9dbcbc71-7687-40b6-bc38-264c623e1aa3",
+			"name": "GetClassroom-id",
+			"url": "http://localhost:5278/api/Classrooms/2",
+			"time": 163,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				163
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "95078ed2-1ff9-445a-800d-287f8e0894fc",
+			"name": "UpdateClassroom",
+			"url": "http://localhost:5278/api/Classrooms",
+			"time": 126,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				126
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "e5c11c4f-789d-436e-ad7f-c2e166dc42d3",
+			"name": "GetClassroom",
+			"url": "http://localhost:5278/api/Classrooms?PageIndex=0&PageSize=20",
+			"time": 168,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				168
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "26f170ba-7990-45b5-8a09-557466bf28cc",
+			"name": "DeleteClassroom",
+			"url": "http://localhost:5278/api/Classrooms/2",
+			"time": 378,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				378
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 877,
+	"collection": {
+		"requests": [
+			{
+				"id": "55cf8d43-ef5c-4ece-89e8-e89b82e901ab",
+				"method": "POST"
+			},
+			{
+				"id": "9dbcbc71-7687-40b6-bc38-264c623e1aa3",
+				"method": "GET"
+			},
+			{
+				"id": "95078ed2-1ff9-445a-800d-287f8e0894fc",
+				"method": "PUT"
+			},
+			{
+				"id": "e5c11c4f-789d-436e-ad7f-c2e166dc42d3",
+				"method": "GET"
+			},
+			{
+				"id": "26f170ba-7990-45b5-8a09-557466bf28cc",
+				"method": "DELETE"
+			}
+		]
+	}
+}

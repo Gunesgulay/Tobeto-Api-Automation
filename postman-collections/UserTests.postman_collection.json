@@ -8,6 +8,19 @@
 	"item": [
 		{
 			"name": "GetUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -27,7 +40,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/Users/2007",
+					"raw": "http://localhost:5278/api/Users/3011",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -36,7 +49,7 @@
 					"path": [
 						"api",
 						"Users",
-						"2007"
+						"3011"
 					]
 				}
 			},
@@ -44,6 +57,19 @@
 		},
 		{
 			"name": "CreateUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 201\", function (){",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -68,7 +94,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"example\",\n  \"email\": \"testexample900@gmail.com\",\n  \"password\": \"1111\"\n}"
+					"raw": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"example\",\n  \"email\": \"testexample954565@gmail.com\",\n  \"password\": \"1111\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Users",
@@ -87,13 +113,26 @@
 		},
 		{
 			"name": "DeleteUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDc5MjE1NjAsImV4cCI6MTcwNzkyMjE2MCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.eGVhAQGXRefkEamBKMa7eADp92Nvm-gM7OwUTq6POliDUOOlrvJ6IA8zdYJn6LrNmO6pknzaYRc2ilroe5uCPQ",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDkzODExNTEsImV4cCI6MTcwOTM4MTc1MSwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.0VIeDdMTo7fYgLnq6QRDY0sNH9GsSSdMezcvEOJ-9giT1l4RWndqFNQt_crCTPJ2igo5eBiNMBPMqGDCCql0hQ",
 							"type": "string"
 						}
 					]
@@ -115,7 +154,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 2007\n}"
+					"raw": "{\n  \"id\": 3011\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Users",
@@ -134,13 +173,26 @@
 		},
 		{
 			"name": "UpdateUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDc5MjE1NjAsImV4cCI6MTcwNzkyMjE2MCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.eGVhAQGXRefkEamBKMa7eADp92Nvm-gM7OwUTq6POliDUOOlrvJ6IA8zdYJn6LrNmO6pknzaYRc2ilroe5uCPQ",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDkzODExNTEsImV4cCI6MTcwOTM4MTc1MSwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.0VIeDdMTo7fYgLnq6QRDY0sNH9GsSSdMezcvEOJ-9giT1l4RWndqFNQt_crCTPJ2igo5eBiNMBPMqGDCCql0hQ",
 							"type": "string"
 						}
 					]
@@ -162,7 +214,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 1013,\n  \"firstName\": \"test12\",\n  \"lastName\": \"example\",\n  \"email\": \"tobeto55@hotmail.com\",\n  \"password\": \"2222\"\n}"
+					"raw": "{\n  \"id\": 3011,\n  \"firstName\": \"test12\",\n  \"lastName\": \"example\",\n  \"email\": \"tobeto55@hotmail.com\",\n  \"password\": \"2222\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Users",

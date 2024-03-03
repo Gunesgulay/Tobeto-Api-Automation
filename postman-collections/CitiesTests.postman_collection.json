@@ -8,6 +8,19 @@
 	"item": [
 		{
 			"name": "GetCity_Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -22,7 +35,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5278/api/Cities/13",
+					"raw": "http://localhost:5278/api/Cities/7",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -31,7 +44,7 @@
 					"path": [
 						"api",
 						"Cities",
-						"13"
+						"7"
 					]
 				}
 			},
@@ -61,7 +74,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "{{bearertoken}}",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDk0OTkzNjEsImV4cCI6MTcwOTQ5OTk2MSwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.keCwHR12JPkKD14gXkBTfF9WZNXbz0Z8v_jTTXUJBSZtax7UF7kT6cZDZRijR2-9pvQkUJO5BRbSh-9x9QDnaQ",
 							"type": "string"
 						}
 					]
@@ -78,10 +91,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/api/Cities?PageIndex=0&PageSize=30",
+					"raw": "http://localhost:5278/api/Cities?PageIndex=0&PageSize=30",
+					"protocol": "http",
 					"host": [
-						"{{host}}"
+						"localhost"
 					],
+					"port": "5278",
 					"path": [
 						"api",
 						"Cities"
@@ -168,26 +183,20 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDc5NzEzMzksImV4cCI6MTcwNzk3MTkzOSwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.0-Fapo18CJiTXBkjSE7jSM_497lvPNo_37yLJSVKlR9--_Vrh8WQkwT-KxzuMaoxnuCilJn1RLg4l-9IFFTH5A",
-							"type": "string"
-						}
-					]
-				},
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"countryId\": 1,\r\n  \"name\": \"TRABZON\",\r\n  \"priority\": 1,\r\n  \"visibility\": true\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n  \"id\": 7,\n  \"countryId\": 6,\n  \"name\": \"İzmir\",\n  \"priority\": 1,\n  \"visibility\": true\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Cities",
@@ -233,7 +242,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5278/api/Cities/13",
+					"raw": "http://localhost:5278/api/Cities/7",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -242,7 +251,7 @@
 					"path": [
 						"api",
 						"Cities",
-						"13"
+						"7"
 					]
 				}
 			},

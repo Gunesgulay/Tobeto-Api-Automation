@@ -8,6 +8,19 @@
 	"item": [
 		{
 			"name": "CreateClassroomExam",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 201\", function (){",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -22,7 +35,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"classroomId\": 1,\n  \"examId\": 1,\n  \"isActive\": true\n}"
+					"raw": "{\n  \"classroomId\": 2,\n  \"examId\": 2012,\n  \"isActive\": true\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/ClassroomExams",
@@ -41,6 +54,19 @@
 		},
 		{
 			"name": "GetClassroomExam-id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -50,7 +76,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/ClassroomExams/1",
+					"raw": "http://localhost:5278/api/ClassroomExams/6",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -59,7 +85,7 @@
 					"path": [
 						"api",
 						"ClassroomExams",
-						"1"
+						"6"
 					]
 				}
 			},
@@ -67,6 +93,19 @@
 		},
 		{
 			"name": "UpdateClassroomExam",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -81,7 +120,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 1,\n  \"classroomId\": 2,\n  \"examId\": 1,\n  \"isActive\": true\n}"
+					"raw": "{\n  \"id\": 6,\n  \"classroomId\": 2,\n  \"examId\": 1,\n  \"isActive\": true\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/ClassroomExams",
@@ -100,6 +139,19 @@
 		},
 		{
 			"name": "DeleteClassroomExam",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -109,7 +161,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/ClassroomExams/3",
+					"raw": "http://localhost:5278/api/ClassroomExams/6",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -118,7 +170,7 @@
 					"path": [
 						"api",
 						"ClassroomExams",
-						"3"
+						"6"
 					]
 				}
 			},
@@ -126,7 +178,30 @@
 		},
 		{
 			"name": "GetClassroomExam",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDk1MDAzMjUsImV4cCI6MTcwOTUwMDkyNSwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.jkT6mEZfJmZzSMw2c71IlX-0CI0WdxmSFunWWol3ikEFZCM6d3YkAqTq_8EbqXUdPqimi0tBAoA2zwISkfuHfw",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{

@@ -8,6 +8,19 @@
 	"item": [
 		{
 			"name": "CreateDistrict",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 201\", function (){",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -41,6 +54,19 @@
 		},
 		{
 			"name": "UpdateDistrict",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -55,7 +81,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 9,\n  \"cityId\": 9,\n  \"name\": \"Mamak/Misket\",\n  \"priority\": 1,\n  \"visibility\": true\n}"
+					"raw": "{\n  \"id\": 2,\n  \"cityId\": 3,\n  \"name\": \"Mamak/Misket\",\n  \"priority\": 1,\n  \"visibility\": true\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Districts",
@@ -74,13 +100,26 @@
 		},
 		{
 			"name": "GetDistrict",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "{{bearertoken}}",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDk0OTgzNTUsImV4cCI6MTcwOTQ5ODk1NSwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.tsf7HQYAyrm886ZWcgSEZGWYWkdZysgwZVnySM1yP2YLwhGH5aIzjgqenp574yh7dbYTwzJIf_5ZQMuvL3GVcA",
 							"type": "string"
 						}
 					]
@@ -119,6 +158,19 @@
 		},
 		{
 			"name": "DeleteDistrict",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -138,7 +190,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/Districts/10",
+					"raw": "http://localhost:5278/api/Districts/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -147,7 +199,7 @@
 					"path": [
 						"api",
 						"Districts",
-						"10"
+						"2"
 					]
 				}
 			},

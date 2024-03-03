@@ -8,6 +8,19 @@
 	"item": [
 		{
 			"name": "CreateSurvey",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 201\", function (){",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -22,7 +35,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"surveyTypeId\": 1,\n  \"organizationId\": 2,\n  \"priority\": 1,\n  \"visibility\": true,\n  \"title\": \"Deneme\",\n  \"content\": \"Deneme2\",\n  \"connectionLink\": \"tobeto.com\",\n  \"isActive\": true,\n  \"publishedDate\": \"2024-02-18T10:20:09.862Z\"\n}"
+					"raw": "{\n  \"surveyTypeId\": 6,\n  \"organizationId\": 8,\n  \"priority\": 1,\n  \"visibility\": true,\n  \"title\": \"Deneme\",\n  \"content\": \"Deneme2\",\n  \"connectionLink\": \"tobeto.com\",\n  \"isActive\": true,\n  \"publishedDate\": \"2024-02-18T10:20:09.862Z\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Surveys",
@@ -41,6 +54,19 @@
 		},
 		{
 			"name": "UpdateSurvey",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -55,7 +81,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 1,\n  \"surveyTypeId\": 1,\n  \"organizationId\": 2,\n  \"priority\": 3,\n  \"visibility\": true,\n  \"title\": \"İstanbul Kodluyor\",\n  \"content\": \"Tobeto\",\n  \"connectionLink\": \"tobeto.com/platform\",\n  \"isActive\": true,\n  \"publishedDate\": \"2024-02-18T10:41:01.582Z\"\n}"
+					"raw": "{\n  \"id\": 7,\n  \"surveyTypeId\": 6,\n  \"organizationId\": 8,\n  \"priority\": 3,\n  \"visibility\": true,\n  \"title\": \"İstanbul Kodluyor\",\n  \"content\": \"Tobeto\",\n  \"connectionLink\": \"tobeto.com/platform\",\n  \"isActive\": true,\n  \"publishedDate\": \"2024-02-18T10:41:01.582Z\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Surveys",
@@ -74,13 +100,26 @@
 		},
 		{
 			"name": "GetSurvey",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgyNTMwNTQsImV4cCI6MTcwODI1MzY1NCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.IUuKKQGv5Kh9g-Vu0Puhp7rK5-SqbiYnMDSFWzEdGL9I4ZpCJbb3KDKmRuWH7Yj7At75aJfU564TWTfBquyolg",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiBOQXJjaGl0ZWN0dXJlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDk1MDAzMjUsImV4cCI6MTcwOTUwMDkyNSwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.jkT6mEZfJmZzSMw2c71IlX-0CI0WdxmSFunWWol3ikEFZCM6d3YkAqTq_8EbqXUdPqimi0tBAoA2zwISkfuHfw",
 							"type": "string"
 						}
 					]
@@ -119,6 +158,19 @@
 		},
 		{
 			"name": "DeleteSurvey",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -128,7 +180,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/Surveys/2",
+					"raw": "http://localhost:5278/api/Surveys/7",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -137,7 +189,7 @@
 					"path": [
 						"api",
 						"Surveys",
-						"2"
+						"7"
 					]
 				}
 			},

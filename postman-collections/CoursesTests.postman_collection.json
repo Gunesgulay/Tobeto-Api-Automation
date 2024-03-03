@@ -8,6 +8,19 @@
 	"item": [
 		{
 			"name": "CreateCourse",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 201\", function (){",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -51,6 +64,19 @@
 		},
 		{
 			"name": "GetCourse",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -70,7 +96,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/Courses/",
+					"raw": "http://localhost:5278/api/Courses/2010",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -79,7 +105,7 @@
 					"path": [
 						"api",
 						"Courses",
-						""
+						"2010"
 					]
 				}
 			},
@@ -87,6 +113,19 @@
 		},
 		{
 			"name": "DeleteCourse",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -106,7 +145,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/Courses/",
+					"raw": "http://localhost:5278/api/Courses/2010",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -115,7 +154,7 @@
 					"path": [
 						"api",
 						"Courses",
-						""
+						"2010"
 					]
 				}
 			},
@@ -123,6 +162,19 @@
 		},
 		{
 			"name": "UpdateCourse",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -147,7 +199,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 7,\n  \"courseCategoryId\": 4,\n  \"name\": \"basicjava\",\n  \"totalDuration\": 5,\n  \"priority\": 1,\n  \"isActive\": true\n}"
+					"raw": "{\n  \"id\": 2010,\n  \"courseCategoryId\": 2005,\n  \"name\": \"basicjava\",\n  \"totalDuration\": 5,\n  \"priority\": 1,\n  \"isActive\": true\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Courses",

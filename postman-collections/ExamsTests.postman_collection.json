@@ -96,7 +96,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5278/api/Exams/2007",
+					"raw": "http://localhost:5278/api/Exams/2010",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -105,7 +105,7 @@
 					"path": [
 						"api",
 						"Exams",
-						"2007"
+						"2010"
 					]
 				}
 			},
@@ -150,7 +150,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 2007,\n  \"name\": \"java\",\n  \"priority\": 1,\n  \"visibility\": true,\n  \"description\": \"secondlevel\",\n  \"numberOfQuestions\": 20,\n  \"startingTime\": \"2024-02-23T12:12:00.430Z\",\n  \"endingTime\": \"2024-02-23T12:13:00.430Z\",\n  \"isActive\": true,\n  \"duration\": 20\n}"
+					"raw": "{\n  \"id\": 2010,\n  \"name\": \"java\",\n  \"priority\": 1,\n  \"visibility\": true,\n  \"description\": \"secondlevel\",\n  \"numberOfQuestions\": 20,\n  \"startingTime\": \"2024-02-23T12:12:00.430Z\",\n  \"endingTime\": \"2024-02-23T12:13:00.430Z\",\n  \"isActive\": true,\n  \"duration\": 20\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5278/api/Exams",
@@ -210,7 +210,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5278/api/Exams/2007",
+					"raw": "http://localhost:5278/api/Exams/2010",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -219,7 +219,7 @@
 					"path": [
 						"api",
 						"Exams",
-						"2007"
+						"2010"
 					]
 				}
 			},
